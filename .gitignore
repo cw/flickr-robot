@@ -1,5 +1,5 @@
 dist
 node_modules
-lib/flickr.js
-test/flickr_test.js
+lib/flickr-robot.js
+test/flickr-robot_test.js
 .env
