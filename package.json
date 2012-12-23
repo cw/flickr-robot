@@ -1,0 +1,35 @@
+{
+  "name": "flickr",
+  "description": "Flickr photo management and automation",
+  "version": "0.1.0",
+  "homepage": "https://github.com/cw/flickr",
+  "author": {
+    "name": "Christian Wilcox",
+    "email": "cw@christianwilcox.com",
+    "url": "http://christianwilcox.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/cw/flickr.git"
+  },
+  "bugs": {
+    "url": "https://github.com/cw/flickr/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/cw/flickr/blob/master/LICENSE-MIT"
+    }
+  ],
+  "main": "lib/flickr",
+  "engines": {
+    "node": "*"
+  },
+  "scripts": {
+    "test": "grunt test"
+  },
+  "devDependencies": {
+    "grunt": "~0.3.17"
+  },
+  "keywords": []
+}
