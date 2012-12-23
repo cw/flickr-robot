@@ -1,26 +1,26 @@
-# flickr
+# flickr-robot
 
 Flickr photo management and automation
 
 ## Getting Started
 ### On the server
-Install the module with: `npm install flickr`
+Install the module with: `npm install flickr-robot`
 
 ```javascript
-var flickr = require('flickr');
+var flickr = require('flickr-robot');
 flickr.awesome(); // "awesome"
 ```
 
 ### In the browser
 Download the [production version][min] or the [development version][max].
 
-[min]: https://raw.github.com/cw/flickr/master/dist/flickr.min.js
-[max]: https://raw.github.com/cw/flickr/master/dist/flickr.js
+[min]: https://raw.github.com/cw/flickr-robot/master/dist/flickr-robot.min.js
+[max]: https://raw.github.com/cw/flickr-robot/master/dist/flickr-robot.js
 
 In your web page:
 
 ```html
-<script src="dist/flickr.min.js"></script>
+<script src="dist/flickr-robot.min.js"></script>
 <script>
 awesome(); // "awesome"
 </script>
@@ -32,7 +32,7 @@ In your code, you can attach flickr's methods to any object.
 <script>
 this.exports = Bocoup.utils;
 </script>
-<script src="dist/flickr.min.js"></script>
+<script src="dist/flickr-robot.min.js"></script>
 <script>
 Bocoup.utils.awesome(); // "awesome"
 </script>
