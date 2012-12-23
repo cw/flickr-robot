@@ -26,4 +26,5 @@ exports['awesome'] =
     test.expect(1)
     # tests here
     test.equal(flickr.awesome(), 'awesome', 'should be awesome.')
+#    test.equal(flickr.get_f(), 'client', 'should be awesome.')
     test.done()
