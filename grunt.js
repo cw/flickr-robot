@@ -18,7 +18,7 @@ module.exports = function(grunt) {
       compile: {
         files: {
 //          'grunt.js': 'grunt.coffee'
-         'lib/<%= pkg.name %>.js>': 'lib/<%= pkg.name %>.coffee>'
+         'lib/<%= pkg.name %>.js': 'lib/<%= pkg.name %>.coffee'
         }
       },
     },

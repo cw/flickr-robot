@@ -1,15 +1,14 @@
-/*
- * flickr
- * https://github.com/cw/flickr
- *
- * Copyright (c) 2012 Christian Wilcox
- * Licensed under the MIT license.
- */
+#
+# * flickr
+# * https://github.com/cw/flickr
+# *
+# * Copyright (c) 2012 Christian Wilcox
+# * Licensed under the MIT license.
+# */
 
-(function(exports) {
+((exports) ->
 
-  exports.awesome = function() {
-    return 'awesome';
-  };
+  exports.awesome = ->
+    'awesome'
 
-}(typeof exports === 'object' && exports || this));
+)(exports? or this)
