@@ -1,3 +1,4 @@
 dist
 node_modules
 lib/flickr.js
+test/flickr_test.js

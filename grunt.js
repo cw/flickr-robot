@@ -12,15 +12,12 @@ module.exports = function(grunt) {
         ' Licensed <%= _.pluck(pkg.licenses, "type").join(", ") %> */'
     },
     coffee: {
-      options: {
-        bare: true
-      },
       compile: {
         files: {
-//          'grunt.js': 'grunt.coffee'
-         'lib/<%= pkg.name %>.js': 'lib/<%= pkg.name %>.coffee'
+         'lib/<%= pkg.name %>.js': 'lib/<%= pkg.name %>.coffee',
+         'test/<%= pkg.name %>_test.js': 'test/<%= pkg.name %>_test.coffee'
         }
-      },
+      }
     },
     concat: {
       dist: {

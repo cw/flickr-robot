@@ -1,14 +1,8 @@
+# flickr
+# https://github.com/cw/flickr
 #
-# * flickr
-# * https://github.com/cw/flickr
-# *
-# * Copyright (c) 2012 Christian Wilcox
-# * Licensed under the MIT license.
-# */
+# Copyright (c) 2012 Christian Wilcox
+# Licensed under the MIT license.
 
-((exports) ->
-
-  exports.awesome = ->
-    'awesome'
-
-)(exports? or this)
+exports.awesome = ->
+  'awesome'
