@@ -39,7 +39,7 @@ module.exports = function(grunt) {
     },
     watch: {
       files: '<config:lint.files>',
-      tasks: 'lint test'
+      tasks: 'coffee concat lint test'
     },
     jshint: {
       options: {
@@ -56,13 +56,17 @@ module.exports = function(grunt) {
       },
       globals: {
         exports: true,
-        module: false
+        module: false,
+        require: true,
+        fs: true,
+        path: true,
+        __dirname: true
       }
     },
     uglify: {}
   });
 
   // Default task.
-  grunt.registerTask('default', 'lint test concat min');
+  grunt.registerTask('default', 'coffee lint test concat min');
 
 };
