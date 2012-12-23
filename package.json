@@ -29,7 +29,9 @@
     "test": "grunt test"
   },
   "devDependencies": {
-    "grunt": "~0.3.17"
+    "grunt": "~0.3.17",
+    "flickr-with-uploads": "0.2.2",
+    "path-data": "0.0.5"
   },
   "keywords": []
 }
