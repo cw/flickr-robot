@@ -21,7 +21,11 @@ module.exports = function(grunt) {
     },
     concat: {
       dist: {
-        src: ['<banner:meta.banner>', '<file_strip_banner:lib/<%= pkg.name %>.js>'],
+        src: [
+          '<banner:meta.banner>',
+//          '<file_strip_banner:lib/>'
+          '<file_strip_banner:lib/<%= pkg.name %>.js>'
+        ],
         dest: 'dist/<%= pkg.name %>.js'
       }
     },
@@ -38,7 +42,7 @@ module.exports = function(grunt) {
       files: ['grunt.js', 'lib/**/*.js', 'test/**/*.js']
     },
     watch: {
-      files: '<config:lint.files>',
+      files: ['grunt.js', 'lib/*.coffee', 'test/*.coffee'],
       tasks: 'coffee concat lint test'
     },
     jshint: {
@@ -58,6 +62,7 @@ module.exports = function(grunt) {
         exports: true,
         module: false,
         require: true,
+        console: true,
         fs: true,
         path: true,
         __dirname: true
