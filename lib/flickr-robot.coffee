@@ -6,12 +6,12 @@
 
 fs = require('fs')
 path = require('path')
+_ = require('underscore')
 Flickr = require('flickr-with-uploads').Flickr
 
 # internal helper functions
 readOptions = (callback) ->
   pth = path.join(__dirname, "../.env")
-  console.log "env file: #{pth}"
   fs.readFile(pth, 'utf8', (err, text) ->
     opts = {}
     if not err
@@ -24,39 +24,36 @@ readOptions = (callback) ->
 
 # read client login info and get client
 client = readOptions((err, opts) ->
-  console.log "options: #{opts}"
-#  client = new Flickr('0RjUImXvsYx2P8Gi4eZScFh9fkLJltDV', 'mbu87dOB0FWncTRJ',
-#    '3XF0pqP4daZf9oIlx-a7H1uMLeGrBidkJU', 'KpslBxHoh4QYk6ad')
-#  console.log "connected to client #{client}"
-#  client
-  null
+  console.log "options: #{_.keys(opts)}"
+  client = new Flickr(opts["FLICKR_API_KEY"], opts["FLICKR_API_SECRET"],
+    opts["FLICKR_OA_TOKEN"], opts["FLICKR_OA_SECRET"])
+  console.log "connected to client #{client}"
+  client
 )
 
 api = (method_name, data, callback) ->
   # overloaded as (method_name, data, callback)
   client.createRequest(method_name, data, true, callback).send()
 
-get_photos = ->
+exports.get_photos = ->
   params =
-    user: "test"
-  api('get_photos', params, (err, response) ->
+    user_id: "user_id"
+    per_page: 500
+  count = 0
+  api('flickr.people.getPhotos', params, (err, response) ->
     if err
       console.error("Could not upload photo:", err.toString())
     else
       # usually, the method name is precisely the name of the API method, as they are here:
-      api('flickr.people.getPhotos', {
-          photo_id: response.photoid
-        }, (err, response) ->
-        api('flickr.photosets.addPhoto', {photoset_id: 1272356126, photo_id: response.photo.id}, (err) ->
-          console.log("Full photo info:", response.photo)
-        )
-      )
+      console.log("Photo count:", response.total)
+      count = response.total
   )
-
+  count
 
 exports.awesome = ->
 #  get_photos()
-  try
-    get_photos()
-  catch error
+#  try
+#    get_photos()
+#  catch error
   'awesome'
+

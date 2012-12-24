@@ -26,5 +26,12 @@ exports['awesome'] =
     test.expect(1)
     # tests here
     test.equal(flickr.awesome(), 'awesome', 'should be awesome.')
-#    test.equal(flickr.get_photos(), 'client', 'should be awesome.')
+    test.done()
+  'get photo count': (test) ->
+    test.expect(1)
+    test.equal(
+      flickr.get_photos().length
+      200
+      'non pro account defined in .env.'
+    )
     test.done()
