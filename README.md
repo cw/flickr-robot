@@ -42,7 +42,10 @@ Bocoup.utils.awesome(); // "awesome"
 _(Coming soon)_
 
 ## Examples
-_(Coming soon)_
+```javascript
+var flickr = require('flickr-robot');
+flickr.get_photos(); // "count of photos for user id defined in .env file"
+```
 
 ## Contributing
 In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [grunt](http://gruntjs.com/).
