@@ -31,7 +31,8 @@
   "devDependencies": {
     "grunt": "~0.3.17",
     "flickr-with-uploads": "0.2.2",
-    "path-data": "0.0.5"
+    "path-data": "0.0.5",
+    "underscore": "1.4.3"
   },
   "keywords": []
 }
